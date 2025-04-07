@@ -26,22 +26,15 @@ This analysis is based on the **highly credible** [FitBit Fitness Tracker Data](
 
 ## **🔎 Key Insights**  
 ### **Activity & Calorie Trends**  
-- **Calorie peaks**: 9 AM (primary) & 5-8 PM (secondary).  
-- **Moderate minutes**: Higher on weekends.  
-- **Very active minutes**: Consistent across all days.  
-- **Light minutes**: Higher on weekdays.  
-
-### **Activity by Day of the Week**  
-- **Wednesday** – Highest 'very active' distance.  
-- **Saturday** – Most moderate & light distance.  
-- **Sunday** – Lowest light distance.  
-- **Monday** – Highest sedentary minutes.  
-- **Tuesday** – Highest step count.  
+- **Calorie peaks**: 9 AM (primary) & 5-8 PM (secondary). (keep this)
+- **Too many Sedentary users**: 25% of users were found to be Sedentary.   
 
 ## **📊 Data Visualizations**  
-- **[Calories By Hour](#)** *([Tableau Link](https://public.tableau.com/views/BellaBeatsInsights-caloriesbyhour/CaloriesByHour?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))*  
-- **[Weekend vs. Weekday Activity](#)** *([Tableau Link](https://public.tableau.com/views/BellaBeatsInsights-WeekendVWeekday/Sheet3?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))*  
-- **[Sedentary Minutes vs. Steps](#)** *([Tableau Link](https://public.tableau.com/views/BellaBeatsInsights-SedentaryvSteps/Sheet4?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))*  
+- **[Calories By Hour](#)** *([Tableau Link](https://public.tableau.com/views/BellaBeatsInsights-caloriesbyhour/CaloriesByHour?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))*  (keep this)
+- **[User Distribution by Activity Group](#)** *([Tableau Link](https://public.tableau.com/app/profile/jonathan.byrne7960/viz/UserDistributionbyActivityGroup/UserDistribution?publish=yes))*  
+
+
+Based on (Catrine Tudor-Locke's study)[https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr] which defines less than 5000 daily steps as a sedentary lifestyle, and over 10000 as an active lifestyle. Users were grouped into 3 buckets, Sedentary, Normal and Active. 
 
 ## **📜 SQL Queries**  
 - **[Data Cleaning](#)** *(View SQL code)*  
