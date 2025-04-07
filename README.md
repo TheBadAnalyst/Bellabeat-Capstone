@@ -34,7 +34,22 @@ This analysis is based on the **highly credible** [FitBit Fitness Tracker Data](
 - **[User Distribution by Activity Group](#)** *([Tableau Link](https://public.tableau.com/app/profile/jonathan.byrne7960/viz/UserDistributionbyActivityGroup/UserDistribution?publish=yes))*  
 
 
-Based on (Catrine Tudor-Locke's study)[https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr] which defines less than 5000 daily steps as a sedentary lifestyle, and over 10000 as an active lifestyle. Users were grouped into 3 buckets, Sedentary, Normal and Active. 
+Based on [Catrine Tudor-Locke's study](https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr) 
+
+Which defines less than 5000 daily steps as a sedentary lifestyle, and over 10000 as an active lifestyle. Users were grouped into 3 buckets, Sedentary, Normal and Active, using this SQL query 
+```sql
+SELECT id,
+ROUND(AVG(totalsteps),0) AS avg_steps,
+CASE
+    WHEN ROUND(AVG(totalsteps),0) < 5000 THEN 'Sedentary Group'
+    WHEN ROUND(AVG(totalsteps),0) BETWEEN 5000 AND 10000 THEN 'Normal Group'
+    ELSE 'Active Group'
+END AS activity_group
+FROM dailyactiveclean
+GROUP BY id
+ORDER BY avg_steps
+```
+
 
 ## **📜 SQL Queries**  
 - **[Data Cleaning](#)** *(View SQL code)*  
