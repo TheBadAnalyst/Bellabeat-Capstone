@@ -30,9 +30,10 @@ This analysis is based on the **highly credible** [FitBit Fitness Tracker Data](
 - **Too many Sedentary users**: 25% of users were found to be Sedentary.   
 
 ## **📊 Data Visualizations**  
-- **[Calories By Hour](#)** *([Tableau Link](https://public.tableau.com/views/BellaBeatsInsights-caloriesbyhour/CaloriesByHour?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))*  (keep this)
+- **[Calories By Hour](#)** *([Tableau Link](https://public.tableau.com/views/BellaBeatsInsights-caloriesbyhour/CaloriesByHour?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))* 
 - **[User Distribution by Activity Group](#)** *([Tableau Link](https://public.tableau.com/app/profile/jonathan.byrne7960/viz/UserDistributionbyActivityGroup/UserDistribution?publish=yes))*  
 
+## **⚙️Coding and Queries** 
 
 Based on [Catrine Tudor-Locke's study](https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr) 
 
@@ -49,10 +50,4 @@ FROM dailyactiveclean
 GROUP BY id
 ORDER BY avg_steps
 ```
-
-
-## **📜 SQL Queries**  
-- **[Data Cleaning](#)** *(View SQL code)*  
-- **[Analysis Queries](#)** *(View SQL code)*  
-
 
