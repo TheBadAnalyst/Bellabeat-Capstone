@@ -34,6 +34,13 @@ This analysis is based on the **highly credible** [FitBit Fitness Tracker Data](
 - **[User Distribution by Activity Group](#)** *([Tableau Link](https://public.tableau.com/app/profile/jonathan.byrne7960/viz/UserDistributionbyActivityGroup/UserDistribution?publish=yes))*  
 
 ## **⚙️Coding and Queries** 
+The query used to find out the calories burnt by hour to find out when people are most active in the day
+```sql
+SELECT 24htime, SUM(calories) AS calories
+FROM hourlycaloriesclean
+GROUP BY 24htime 
+
+```
 
 Based on [Catrine Tudor-Locke's study](https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr) 
 
