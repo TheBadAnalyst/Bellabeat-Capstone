@@ -12,7 +12,7 @@ Bellabeat is a growing tech company founded by Urška Sršen and Sando Mur. It s
 ### **Data Source**  
 This analysis is based on the **highly credible** [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit), collected via an Amazon Mechanical Turk survey from December 3–5, 2016. The dataset provides valuable insights into user activity, sleep, and health trends, making it an excellent resource for this study.  
 
-## **📜 Datasets **  
+## **📜 Datasets**  
 - **Raw Data:** [Uncleaned Fitbit data 1.](dailyActivity_merged.csv)
 - **Raw Data:** [Uncleaned Fitbit data 2.](hourlyCalories_merged.csv)
 
