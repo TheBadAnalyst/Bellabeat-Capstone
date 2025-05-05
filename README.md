@@ -10,7 +10,7 @@ As a junior data analyst at Bellabeat, my goal is to analyze fitness data from s
 Bellabeat is a growing tech company founded by Urška Sršen and Sando Mur. It specializes in developing wellness products for women, including the **Leaf, Time,** and **Spring**—smart devices that track health metrics to improve users’ quality of life.  
 
 ### **Data Source**  
-This analysis is based on the **highly credible** [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit), collected via an Amazon Mechanical Turk survey from December 3–5, 2016. The dataset provides valuable insights into user activity, sleep, and health trends, making it an excellent resource for this study.  
+This analysis has been conducted on the [FitBit Fitness Tracker Data](https://www.kaggle.com/datasets/arashnic/fitbit), collected via an Amazon Mechanical Turk survey from December 3–5, 2016. The dataset provides valuable insights into user activity, sleep, and health trends, making it an excellent resource for this study.  
 
 ## **📜 Datasets**  
 - **Raw Data:** [Uncleaned Fitbit data 1.](dailyActivity_merged.csv)
@@ -46,8 +46,19 @@ GROUP BY 24htime
 
 ```
 
-[Catrine Tudor-Locke's study](https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr) proposes categorizing individuals into five activity levels based on their daily step count: Sedentary (<5000), Low Active (5000-7499), Somewhat Active (7500-9999), Active (10000-12499), and Highly Active (>12500). 
-For simpler analysis, users were grouped into three broader categories – Sedentary, Normal, and Active – using the following SQL query 
+[Catrine Tudor-Locke's study](https://pubmed.ncbi.nlm.nih.gov/14715035/#:~:text=Authors,1%20%2C%20David%20R%20Bassett%20Jr) proposes categorizing individuals into five activity levels based on their daily step count:
+ - Sedentary (<5000)
+ - Low Active (5000-7499)
+ - Somewhat Active (7500-9999)
+ - Active (10000-12499)
+ - Highly Active (>12500)
+ 
+For simpler analysis, users were grouped into three broader categories;
+- Sedentary (<5000)
+- Normal (5000-10000)
+- Active (>10000)
+
+ 
 ```sql
 SELECT id,
 ROUND(AVG(totalsteps),0) AS avg_steps,
@@ -61,18 +72,11 @@ GROUP BY id
 ORDER BY avg_steps
 ```
 
-Catrine Tudor-locke's study suggests putting people into 5 buckets.
-
- - Sedentary
- - Low Active
- - Somewhat Active
- - Active
- - Highly Active
 ## **📌Reccomendations**
 
-### Marketing Recommendations Based on User Activity Levels and Peak Activity Times:###
+### Marketing Recommendations Based on User Activity Levels and Peak Activity Times:
 
-To optimize user engagement and promote healthier habits, we recommend implementing targeted strategies for different activity levels, considering the identified peak activity times around 9 am and 5-8 pm .
+To drive greater user engagement and encourage healthier habits, we should implement targeted strategies based on activity levels. We've noted peak activity around 9 AM and then again from 5 to 8 PM, so we can really focus our efforts then, primarily using push notifications, and online marketing campigns. We should also look at replacing the BellaBeat WellnessCoach with a two-tier subscription service, with one level for our standard users and another for the active group.
 
 **Push Notification Timing:**
 
@@ -82,21 +86,23 @@ Targeted Strategies for Each User Group:
 
 Each user group will be engaged with tailored approaches:
 
-1. Targeting the 'Normal' Group:
+### 1. Targeting the 'Normal' Group:
 
 This group represents over 50% of our market, warranting a significant portion of our marketing efforts. Strategies for this segment will include:
 
 * Milestone tracking to celebrate progress.
 * Community-based competitions to foster engagement and motivation.
 * Daily goals and challenges to encourage consistent activity.
+* 
   
-2. Targeting the 'Sedentary' Group:
+### 2. Targeting the 'Sedentary' Group:
 
 Comprising 25% of our users, this group is of critical importance due to the significant health risks associated with a sedentary lifestyle. Our primary goal is to guide these users towards the 'Normal' activity group. We can achieve this by:
 
 * Gamifying the user experience with reward systems for achieving small activity goals.
 * Offering bonus rewards for logging activities completed with a friend to encourage social support.
-3. Targeting the 'Active' Group:
+
+### 3. Targeting the 'Active' Group:
 
 These users are already invested in their fitness. Our strategy for this group will focus on:
 
